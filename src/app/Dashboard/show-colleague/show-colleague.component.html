@@ -1,0 +1,36 @@
+<div style="height: 80vh;">
+    <div class="container">
+       <div class="row  mx-5 my-5">
+           <div  class="col-12  ">
+   
+               <table class="table">
+                   <thead class="thead-dark">
+                     <tr>
+                       <th scope="col">Colleague ID</th>
+                       <th scope="col">Colleague Name</th>
+                       <th scope="col">City</th>
+                       <th scope="col">Pincode</th>
+                       <th scope="col">Mobile Number</th>
+                       <th scope="col">Edit/Delete</th>
+                     </tr>
+                   </thead>
+                   
+                   <tbody>
+                       <tr *ngFor="let cust of colleague">
+                                   <th scope="row"> {{cust.id}}       </th>
+                                  <td>         {{cust.name}}       </td>
+                                  <td>        {{cust.city}}         </td> 
+                                  <td>        {{cust.pincode}}             </td>
+                                  <td>       {{cust.mobileNumber}}           </td>
+                                  <td>  <button class="btn btn-secondary" (click)= "onClick(cust)">Edit</button>&nbsp;
+                                   <button class="btn btn-danger" (click)= "onDelete(cust)">Delete</button>      </td> 
+                       </tr>
+                   </tbody>
+                 </table>
+   
+           </div>
+   
+   
+       </div>
+    </div>
+   </div>
